@@ -33,7 +33,7 @@ $.ajax({
 
 function yelpApi(business) {
     var searchResults = document.getElementsByClassName("results")[0];
-    var resultDiv = "<div class='output'><img src='";
+    var resultDiv = "<a target='_blank' href = ' "+ business.url + "  '><div class='output'><img src='";
     resultDiv += business.image_url;
     resultDiv += "'> ";
             resultDiv += "<div class='name'>";
@@ -42,6 +42,7 @@ function yelpApi(business) {
                 resultDiv += business.location.address + " " +"Philadelphia, PA";
                 resultDiv += "</div>";
     			resultDiv += "</div></div>";
+                resultDiv += "</a>"
                 
     
     searchResults.innerHTML += resultDiv;
